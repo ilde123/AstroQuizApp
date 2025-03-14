@@ -1,0 +1,29 @@
+h1 {
+	text-align: center;
+	font-family: 'Century Gotic', sans-serif;
+	color: azure;
+	margin-top: 1em;
+}
+
+.card {
+	margin: 1em;
+}
+
+app-subnivel {
+	margin: .5em;
+}
+
+h4 {
+	text-align: center;
+	font-weight: bold;
+}
+
+a {
+	color: #007bff;
+	font-size: 2em;
+}
+
+app-subnivel {
+	margin: .5em;
+	flex: 33%;
+}

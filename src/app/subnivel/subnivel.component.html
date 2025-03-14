@@ -1,0 +1,48 @@
+<a href="#" class="btn btn-primary" data-toggle="modal" data-bs-target="#modalJuego" (click)="iniciarJuego()">
+	Jugar <fa-icon [icon]="faPlay"></fa-icon>
+</a>
+
+<div class="modal" id="modalJuego{{nivel}}{{subnivel}}">
+	<div class="modal-dialog modal-dialog-centered modal-xl">
+		<div class="modal-content">
+
+			<!-- Modal Header -->
+			<div class="modal-header">
+				<fa-icon [icon]="faCircle" *ngFor="let pregunta of preguntas" class="punto-pregunta{{nivel}}{{subnivel}} punto-pregunta"></fa-icon>
+			</div>
+
+			<!-- Modal body -->
+			<div class="modal-body">
+				<div class="row">
+					<div class="col">
+						<h4>
+							{{preguntas[indexPregunta].texto}}
+						</h4>
+						<img *ngIf="preguntas[indexPregunta].tipo =='img'" [src]="preguntas[indexPregunta].img" alt="" class="img-modal">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-3 col-md-12">
+						<button type="button" class="btn btn-outline-primary btn-lg btn-pregunta" (click)="jugar($event)">{{respuestas[indexRespuesta1]}}</button>
+					</div>
+					<div class="col-lg-3 col-md-12">
+						<button type="button" class="btn btn-outline-primary btn-lg btn-pregunta" (click)="jugar($event)">{{respuestas[indexRespuesta2]}}</button>
+					</div>
+					<div class="col-lg-3 col-md-12">
+						<button type="button" class="btn btn-outline-primary btn-lg btn-pregunta" (click)="jugar($event)">{{respuestas[indexRespuesta3]}}</button>
+					</div>
+					<div class="col-lg-3 col-md-12">
+						<button type="button" class="btn btn-outline-primary btn-lg btn-pregunta" (click)="jugar($event)">{{respuestas[indexRespuesta4]}}</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- Modal footer -->
+			<div class="modal-footer">
+				<button type="button" id="btnCerrarModalJuego{{nivel}}{{subnivel}}" class="btn btn-danger" data-bs-dismiss="modal">
+					Cerrar <fa-icon [icon]="faXMark"></fa-icon>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,49 @@
+.card-body {
+	background-size: contain;
+	background-repeat: repeat-x;
+}
+
+img {
+	width: 33%;
+	height: auto;
+}
+
+.img-modal {
+	margin-bottom: 1em;
+	width: 50%;
+}
+
+.form-control-plaintext {
+	background-color: transparent;
+	border: none;
+	text-align: center;
+}
+
+button {
+	margin-left: 1em;
+	margin-right: 1em;
+	margin-top: 1em;
+}
+
+.btn-pregunta {
+	width: -moz-available;
+	width: -webkit-fill-available;
+}
+
+h4 {
+	margin-bottom: 1em;
+}
+
+.punto-pregunta {
+	color: #007bff;
+	flex: auto;
+}
+
+.modal-header {
+	display: flex;
+}
+
+.alert {
+	top: -20em;
+	position: absolute;
+}

@@ -1,0 +1,11 @@
+<div class="card">
+	<div class="card-body">
+		<img src="Saturno_gris.png" alt="Saturno" id="img1{{nivel}}{{subnivel}}" class="img-fluid">
+		<img src="Saturno_gris.png" alt="Saturno" id="img2{{nivel}}{{subnivel}}" class="img-fluid">
+		<img src="Saturno_gris.png" alt="Saturno" id="img3{{nivel}}{{subnivel}}" class="img-fluid">
+		<h4 class="card-title">
+			<input type="text" readonly class="form-control-plaintext" id="aciertos" name="aciertos" value="{{aciertos}}/{{preguntas.length}}">
+		</h4>
+		<app-subnivel (nAciertos)="agregarAciertos($event)" [subnivel]="subnivel" [nivel]="nivel"></app-subnivel>
+	</div>
+</div>

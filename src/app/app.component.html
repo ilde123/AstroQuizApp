@@ -1,0 +1,23 @@
+<h1>{{titulo}}</h1>
+
+<div class="container">
+	<div class="card" *ngFor="let nivel of niveles">
+		<div class="card-body text-center">
+			<h4 class="card-title">Nivel {{nivel}}</h4>
+			<div class="progress">
+				<div class="progress-bar progress-bar{{nivel}} progress-bar-striped progress-bar-animated" style="width: 0%;">{{porcentaceAcierto}}%</div>
+			</div>
+			<a href="" data-bs-toggle="collapse" (click)="mostrarNivel(nivel)">
+				<fa-icon [icon]="faCircleChevronDown"></fa-icon>
+			</a>
+
+			<div id="nivel{{nivel}}" class="collapse">
+				<div class="row">
+					<div class="col-sm" *ngFor="let subnivel of subniveles" >
+						<app-nivel (nAciertos)="agregarNAciertos($event, nivel)" (nPreguntas)="agregarNPreguntas($event)" [subnivel]="subnivel" [nivel]="nivel"></app-nivel>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

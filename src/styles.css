@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+	background-image: url("../public/fondo4.jpg");
+	background-size: cover;
+	background-repeat: repeat-y;
+	scrollbar-width: thin;
+}

@@ -1,0 +1,19 @@
+.card-body {
+	background-size: contain;
+	background-repeat: repeat-x;
+}
+
+img {
+	width: 33%;
+	height: auto;
+}
+
+.form-control-plaintext {
+	background-color: transparent;
+	border: none;
+	text-align: center;
+}
+
+.card {
+	margin: 0.5em;
+}
